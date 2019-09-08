@@ -11,13 +11,29 @@ skills:
     percentage: 70
   - title: Branding
     percentage: 61
-testimonials:
-  - quote: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
-    author: David White, Designer at Huglab
-  - quote: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
-    author: David White, Designer at Huglab
-  - quote: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
-    author: David White, Designer at Huglab
+educations:
+  - name: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
+    detail: David White, Designer at Huglab
+  - name: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+    detail: David White, Designer at Huglab
+  - name: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
+    detail: David White, Designer at Huglab
+experiences:
+  - title: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
+    p1: David White, Designer at Huglab
+	p2: David White, Designer at Huglab
+	p3: David White, Designer at Huglab
+	p4: David White, Designer at Huglab
+  - title: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
+    p1: David White, Designer at Huglab
+	p2: David White, Designer at Huglab
+	p3: David White, Designer at Huglab
+	p4: David White, Designer at Huglab  - name: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
+  - title: Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est.
+    p1: David White, Designer at Huglab
+	p2: David White, Designer at Huglab
+	p3: David White, Designer at Huglab
+	p4: David White, Designer at Huglab
 ---
 
 <div class='full parallax' style='background-image: url(images/@stock/about-us.jpg); color: #fff;'>
@@ -31,7 +47,33 @@ testimonials:
 
 <div class='full'>
   <div class='row'>
-    <div class='medium-6 columns'>
+    <div class='medium-3 columns panel'>
+      <h3>Our history</h3>
+      <span class='label radius'>Radius Label</span>
+	  <span class='label radius'>Radius</span>
+	  <span class='label radius'>Radius Label</span>
+	  <span class='label radius'>Label</span>
+	  <span class='label radius'>Radius Label</span>
+	  <span class='label radius'>Radius Label</span>
+	</div>
+	<div class='medium-3 columns panel'>
+      <h3>Our history</h3>
+      <span class='label radius'>Radius Label</span>
+	</div>
+	<div class='medium-3 columns panel'>
+      <h3>Our history</h3>
+      <span class='label radius'>Radius Label</span>
+	</div>
+	<div class='medium-3 columns panel'>
+      <h3>Our history</h3>
+      <span class='label radius'>Radius Label</span>
+	</div>
+  </div>
+</div>
+
+<!--div class='full'>
+  <div class='row'>
+    <div class='medium-3 columns'>
       <h3>Our history</h3>
       <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.</p>
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.</p>
@@ -54,7 +96,6 @@ testimonials:
     </div>
   </div>
 </div>
-
 
 <div class='full'>
   <div class='row'>
@@ -85,20 +126,13 @@ testimonials:
       </div>
     {% endfor %}
   </div>
-</div>
+</div-->
 
 
 <div class='full parallax' style='background: #f5f5f5'>
   <div class='row'>
     <div class='large-12 columns'>
-      <p class='centered-text'>
-        <i class='fa fa-quote-left' style='color: #F9CE06; font-size: 36px;'></i>
-      </p>
-    </div>
-  </div>
-  <div class='row'>
-    <div class='large-12 columns'>
-      {% include section-header.html title="What our clients say" %}
+      {% include section-header.html title="Education" %}
       <div class='spacing'></div>
     </div>
   </div>
@@ -108,10 +142,10 @@ testimonials:
         <div class='row'>
           <div class='small-12 columns'>
             <div class='items centered-text'>
-              {% for testimonial in page.testimonials %}
+              {% for education in page.educations %}
                 <div class='item'>
-                  <p class='quote'>"{{testimonial.quote}}"</p>
-                  <p class='author'>- {{testimonial.author}}</p>
+                  <p class='quote'>{{education.name}}</p>
+                  <p class='author'>{{education.detail}}</p>
                   <div class='two spacing'></div>
                 </div>
               {% endfor %}
@@ -120,6 +154,48 @@ testimonials:
           <div class='spacing'></div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class='full parallax' style='background: #f5f5f5'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Coursework" %}
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <span class='label radius'>Radius Label</span>
+	  <span class='label radius'>Radius</span>
+	  <span class='label radius'>Radius Label</span>
+	  <span class='label radius'>Label</span>
+	  <span class='label radius'>Radius Label</span>
+	  <span class='label radius'>Radius Label</span>
+    </div>
+  </div>
+</div>
+
+<div class='full parallax' style='background: #f5f5f5'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Experience" %}
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% for experience in page.experiences %}
+          <h3>{{experience.title}}</h3>
+		  <ul>
+			<li>{{experience.p1}}</li>
+			<li>{{experience.p2}}</li>
+			<li>{{experience.p3}}</li>
+			<li>{{experience.p4}}</li>
+		  </ul>
+          <div class='two spacing'></div>
+      {% endfor %}
     </div>
   </div>
 </div>
